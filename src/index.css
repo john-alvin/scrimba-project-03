@@ -3,6 +3,11 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: "Inter", sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
 nav {
   border-bottom: 1px solid #00000014;
@@ -10,4 +15,46 @@ nav {
 }
 .air-bnb {
   padding: 22px 30px;
+}
+
+.group-image {
+  width: 100%;
+  padding: 20px 100px;
+}
+
+.description {
+  padding: 0 50px;
+}
+.description > h1 {
+  font-size: 37px;
+  margin-bottom: 10px;
+}
+.description > p {
+  max-width: 320px;
+}
+.card {
+  position: relative;
+  margin: 40px 0;
+  padding: 0 50px;
+  line-height: 1.7rem;
+}
+
+.button {
+  position: absolute;
+  border: none;
+  margin: 10px 10px;
+  background-color: #fff;
+  padding: 10px 10px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.star-icon {
+  height: 14px;
+  margin-right: 5px;
+}
+.usa {
+  color: #918e9b;
+}
+.from {
+  font-weight: 700;
 }
