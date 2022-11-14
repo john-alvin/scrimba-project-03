@@ -3,41 +3,28 @@ import "./index.css";
 import Navbar from "./component/Navbar";
 import Hero from "./component/Hero";
 import Card from "./component/Card";
+import data from "./data";
 
 function App() {
+  const cardData = data.map((card) => {
+    return (
+      <Card
+        key={card.id}
+        img={card.coverImg}
+        rating={card.stats.rating}
+        reviewCount={card.stats.reviewCount}
+        location={card.location}
+        title={card.title}
+        price={card.price}
+        openSpots={card.openSpots}
+      />
+    );
+  });
   return (
     <div>
       <Navbar />
+      <div className="container">{cardData}</div>
       <Hero />
-      <div className="container">
-        <Card
-          img="photo-01.png"
-          status="Sold Out"
-          rating="5.0"
-          reviewCount="(6)"
-          country="USA"
-          title="Life lessons with Katie Zaferes"
-          price="$136"
-        />
-        <Card
-          img="photo-02.png"
-          status="Restocking"
-          rating="4.0"
-          reviewCount="(3)"
-          country="Canada"
-          title="Learn wedding photography"
-          price="$126"
-        />
-        <Card
-          img="photo-03.png"
-          status="On Stock"
-          rating="4.2"
-          reviewCount="(7)"
-          country="Japan"
-          title="Group Mountain Biking"
-          price="$89"
-        />
-      </div>
     </div>
   );
 }
