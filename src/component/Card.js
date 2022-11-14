@@ -1,13 +1,12 @@
 import React from "react";
-import starIcon from "../images/star.png";
 
 function Card(props) {
   return (
     <div className="card">
       <button className="button">{props.status}</button>
-      <img src={props.img} alt="card" className="card-photo" />
+      <img src={`../images/${props.img}`} alt="card" className="card-photo" />
       <p className="rating">
-        <img src={starIcon} alt="star-icon" className="star-icon" />
+        <img src="../images/star.png" alt="star-icon" className="star-icon" />
         {props.rating}{" "}
         <span className="usa">
           {props.reviewCount} - {props.country}
